@@ -1,7 +1,8 @@
 __author__ = 'ClarkWong'
 
 from app import db, app
-from flask.ext.restful import reqparse, abort, Api, Resource, fields, marshal_with
+from flask.ext.restful import reqparse, abort, Api, Resource, fields, marshal_with, marshal
+from flask import jsonify
 from models import User
 
 api = Api(app)
@@ -45,9 +46,10 @@ class UserListApi(Resource):
         super(UserListApi, self).__init__()
 
     def get(self):
-        pass
+        userList = User.query.all()
+        return [marshal(user, user_fields) for user in userList]
 
-    @marshal_with(user_fields, envelope='user')
+    @marshal_with(user_fields)
     def post(self):
         args = self.parser.parse_args()
         name = args['name']
