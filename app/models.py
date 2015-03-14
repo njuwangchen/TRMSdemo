@@ -9,7 +9,7 @@ class User(db.Model):
     privilege = db.Column(db.Integer, nullable=False)
     description = db.Column(db.Text)
 
-    def __init__(self, name, password, privilege=0, description=''):
+    def __init__(self, name, password, privilege, description=''):
         self.name = name
         self.password = password
         self.privilege = privilege
