@@ -28,17 +28,17 @@
             <td>得到所有用户列表</td>
         </tr>
          <tr>
-            <td>../api/v1/user/<int:user_id></td>
+            <td>../api/v1/users/<int:user_id></td>
             <td>get</td>
             <td>根据user_id得到当前用户</td>
         </tr>
          <tr>
-            <td>../api/v1/user/<int:user_id></td>
+            <td>../api/v1/users/<int:user_id></td>
             <td>put</td>
             <td>根据user_id得到当前用户，并根据request中的参数修改用户数据</td>
         </tr>
          <tr>
-            <td>../api/v1/user/<int:user_id></td>
+            <td>../api/v1/users/<int:user_id></td>
             <td>delete</td>
             <td>根据user_id得到当前用户，并从数据库删除</td>
         </tr>

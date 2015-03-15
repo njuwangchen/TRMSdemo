@@ -85,4 +85,4 @@ class UserListApi(Resource):
         return user, 201
 
 api.add_resource(UserListApi, '/api/v1/users', endpoint='userList')
-api.add_resource(UserApi, '/api/v1/user/<user_id>', endpoint='user')
+api.add_resource(UserApi, '/api/v1/users/<user_id>', endpoint='user')
