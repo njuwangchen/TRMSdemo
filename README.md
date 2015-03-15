@@ -15,10 +15,11 @@
    + python run.py
 
 ###4. API说明：
-   ||*URL*||*method*||*description*||
-   ||../api/v1/users               || post   ||       新建一个用户（参数要放在request的parameters中）||
-   ||../api/v1/users               || get    ||       得到所有用户列表||
-   ||../api/v1/user/<int:user_id>  || get    ||       根据user_id得到当前用户||
-   ||../api/v1/user/<int:user_id>  || put    ||       根据user_id得到当前用户，并根据request中的参数修改用户数据||
-   ||../api/v1/user/<int:user_id>  || delete ||       根据user_id得到当前用户，并从数据库删除||
+   |*URL*|*method*|*description*|
+   |-----|:------:|------------:|
+   |../api/v1/users               | post   |      新建一个用户（参数要放在request的parameters中）||
+   |../api/v1/users               | get    |      得到所有用户列表||
+   |../api/v1/user/<int:user_id>  | get    |      根据user_id得到当前用户||
+   |../api/v1/user/<int:user_id>  | put    |      根据user_id得到当前用户，并根据request中的参数修改用户数据||
+   |../api/v1/user/<int:user_id>  | delete |      根据user_id得到当前用户，并从数据库删除||
 
