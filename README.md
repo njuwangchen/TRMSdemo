@@ -1,5 +1,7 @@
 # TRMSdemo
+
 部署说明：
+
 1. 安装依赖环境：
    virtualenv env #在目录下新建虚拟环境
    . env/bin/activate #打开虚拟环境
