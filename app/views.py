@@ -18,10 +18,10 @@ class UserApi(Resource):
 
     def __init__(self):
         self.parser = reqparse.RequestParser()
-        self.parser.add_argument('name', type=str)
-        self.parser.add_argument('password', type=str)
-        self.parser.add_argument('privilege', type=int)
-        self.parser.add_argument('description', type=str)
+        self.parser.add_argument('name', type=str, location='json')
+        self.parser.add_argument('password', type=str, location='json')
+        self.parser.add_argument('privilege', type=int, location='json')
+        self.parser.add_argument('description', type=str, location='json')
         super(UserApi, self).__init__()
 
     @marshal_with(user_fields)
@@ -59,10 +59,10 @@ class UserListApi(Resource):
 
     def __init__(self):
         self.parser = reqparse.RequestParser()
-        self.parser.add_argument('name', type=str, required=True)
-        self.parser.add_argument('password', type=str, required=True)
-        self.parser.add_argument('privilege', type=int, required=True)
-        self.parser.add_argument('description', type=str)
+        self.parser.add_argument('name', type=str, required=True, location='json')
+        self.parser.add_argument('password', type=str, required=True, location='json')
+        self.parser.add_argument('privilege', type=int, required=True, location='json')
+        self.parser.add_argument('description', type=str, location='json')
         super(UserListApi, self).__init__()
 
     def get(self):
