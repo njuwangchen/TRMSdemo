@@ -1,10 +1,9 @@
 __author__ = 'ClarkWong'
 
-from app import db, app
-from flask.ext.restful import reqparse, abort, Api, Resource, fields, marshal_with, marshal
+from app import db, api
+from flask.ext.restful import reqparse, abort, Resource, fields, marshal_with, marshal
 from models import User
 
-api = Api(app)
 
 user_fields = {
     'id' : fields.Integer,
